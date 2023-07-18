@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<style>
+		html {  
+      		scroll-behavior: smooth;
+		}
+		*{
+			text-decoration: none;
+			list-style: none;
+			
+		}
+        .about{
+			background-color: #333;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			height: 1100px;
+
+		}
+		.about h1{
+			color: rgb(102, 173, 190);
+			font-weight: 400px;
+		}
+		.about p{
+			color: #E7E7E7;
+			font-size: 22px;
+		}
+		.about ul{
+			color: #E7E7E7;
+			font-size: 20px;
+
+		}
+		.man{
+			height: 300px;
+			width: 300px;
+			margin-left: 55%;
+			position: absolute;
+		}
+
+
+
+	
+	</style>
+	
+</head>
+<body>
+
+
+	<div  class="about" id="about">
+		<div class="container">
+			<section>
+				<h1>About Heart Diseases</h1>
+				<p >Heart disease, also known as cardiovascular disease, is a term that encompasses a range of conditions that affect the heart and blood vessels. These conditions include:</p>
+				<ul>
+					<li>Coronary artery disease</li>
+					<li>Heart failure</li>
+					<li>Heart valve disease</li>
+					<li>Arrhythmias</li>
+				</ul>
+				<p>Heart disease is the leading cause of death for both men and women worldwide. However, there are steps you can take to reduce your risk of developing heart disease:</p>
+				<ul>
+					<li>Eat a healthy diet</li>
+					<li>Exercise regularly</li>
+					<li>Maintain a healthy weight</li>
+					<li>Avoid smoking and secondhand smoke</li>
+					<li>Control your blood pressure and cholesterol levels</li>
+					<li>Manage stress</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Tips for Heart Disease Patients</h1>
+				
+				<p>If you have been diagnosed with heart disease, there are additional steps you can take to manage your condition and improve your overall health:</p>
+				<img src="{{url_for('static', filename='Image/t.jpeg')}}" alt="" class="man">
+				<br>
+				<ul>
+					<li>Take your medications as prescribed</li>
+					<li>Follow a heart-healthy diet</li>
+					<li>Exercise regularly, with your doctor's approval</li>
+					<li>Quit smoking if you haven't already</li>
+					<li>Limit alcohol intake</li>
+					<li>Get enough sleep</li>
+					<li>Manage stress</li>
+					<li>Stay up-to-date on your doctor appointments and checkups</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	
+
+</body>
+
+</html>

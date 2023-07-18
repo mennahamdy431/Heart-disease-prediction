@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart Disease Prediction</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<style>
+		html {  
+      		scroll-behavior: smooth;
+		}
+		*{
+			text-decoration: none;
+			list-style: none;
+			
+		}
+		.navbar-nav{
+			margin-left: 300px;
+			color: rgb(102, 173, 190);
+			
+		}
+		.navbar-brand{
+			font-size:40px;
+			font-weight: bold;
+			font-family: 'Roboto Slab', serif;
+		}
+		.nav-item{
+			font-size: 20px;
+			font-family: 'Roboto Slab', serif;
+		}
+		.logo{
+			height: 150px;
+			width: 160px;
+		}
+		.home{
+			height: 660px;
+			background-color: #333;
+  			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+
+		}
+		.prag{
+			color: rgb(255, 255, 255);
+			font-size: 25px;
+			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			text-align: center;
+			margin-top: 100px;
+			font-weight:500;
+			position: relative;
+		}
+		.centralimg{
+			height: 140px;
+			width: 570px;
+			margin-left: 30%;
+		}
+		.clr{
+			font-size: 36px;
+			font-family: 'Roboto Slab', serif;
+			text-align: center;
+			font-weight: bold;
+			position: relative;
+			color: rgb(102, 173, 190);
+		}
+		.check{
+			margin-left: 45%;
+			margin-top: 3px;
+			position: absolute;
+			color: white !important;
+			border: 1px solid rgb(102, 173, 190);
+			background-color: rgb(102, 173, 190);
+			padding: 18px 25px ;
+			font-size: 20px;
+			border-radius: 20px;
+		}
+		.check:hover{
+			cursor: pointer;
+			text-decoration: none;
+		}
+	
+	</style>
+	
+</head>
+<body>
+	
+	<div class="home" id="home">
+			<!-- Bootstrap CSS -->
+
+			<nav class="navbar navbar-expand-lg navbar-dark ">
+				<img src="{{ url_for('static', filename='Image/downlad.png')}}" alt="heart" class="logo">
+
+			  <a class="navbar-brand" href="#">Heart Disease Prediction</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" >
+				  <li class="nav-item active">
+					<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="about">About</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="predict" >Prediction</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="contact" >Contact us</a>
+				  </li>
+				</ul>
+			  </div>
+			</nav>
+		<p class="prag">Predict your chance of having <br> a heart disease because  <br></p>
+		<img src="{{url_for('static', filename='Image/h.png')}}" alt="" class="centralimg">
+		<p class="clr">prevention is better than cure!</p>
+		<a class="check" href="predict">
+			CHECK NOW!
+		</a>
+	</div>
+
+</body>
+
+</html>

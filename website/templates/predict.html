@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<style>
+		html {  
+      		scroll-behavior: smooth;
+		}
+		*{
+			text-decoration: none;
+			list-style: none;
+			
+		}
+
+
+		.ques{
+			margin-left: 10%;
+			background-color: rgb(102, 173, 190);
+			width: 1100px;
+			height: 600px;
+			border-radius: 15px;
+			position: absolute;
+			margin-top: 2%;
+		}
+		
+		.title{
+			position: relative;
+			margin-left: 5%;
+			color: #ffffff;
+			position: absolute;
+			top: 50px;
+			font-size: 45px;
+			
+		}
+		.predict{
+			background-color: #333;
+			height: 700px;
+			position: relative;
+			
+		}
+		.ques .info .inpt{
+			border: 1px solid rgb(103, 137, 209);
+			border-radius: 20px;
+			padding: 15px 20px;
+			margin-left: 20px;
+		}
+
+		.info{
+			margin-left: 70px;
+			margin-top: 40px;
+			color: white;
+			display: flex;
+			position: absolute;
+			top: 100px;
+
+		}
+		.child2{
+			margin-left: 100px;
+		}
+		.lb{
+			font-size: 24px;
+		}
+		.submit{
+			margin-left: 38%;
+			margin-top: 35px;
+			position: absolute;
+			top: 450px;
+
+		}
+		.submit input{
+			margin-left: 20px;
+			color: #E7E7E7 !important;
+			border: 1px solid #333;
+			padding: 20px  ;
+			font-size: 20px;
+			border-radius: 20px;
+			background-color: #333;
+			font-size: 25px;
+
+		}
+
+		.submit-button {
+			color: white;
+			border: none;
+			cursor: pointer;
+			margin-left: 20px;
+			border: 1px solid #333;
+			padding: 20px  ;
+			font-size: 20px;
+			border-radius: 20px;
+			background-color: #333;
+			font-size: 25px;
+
+		  }
+		  
+
+	
+	</style>
+	
+</head>
+<body>
+
+
+	<div  id="predict" class="predict">
+		<form class="ques" method="POST" action="/predictHeartDisease">
+			<h1 class="title">Heart Disease Prediction</h1>
+
+		<div class="info">
+			<div class="child1">
+				<label class="lb" for="gender">Gender:</label>
+				<select id="gender" name="gender" required class="inpt">
+					<option value="">--Select Gender--</option>
+					<option value="0">Female</option>
+					<option value="1">Male</option>
+				</select><br><br>
+		
+				<label class="lb" for="chest_pain">Chest Pain Type:</label>
+				<select id="chest_pain" name="chest_pain" class="inpt required >
+					<option value="">--Select Chest Pain Type--</option>
+					<option value="3">Typical Angina</option>
+					<option value="1">Atypical Angina</option>
+					<option value="2">Non-Anginal Pain</option>
+					<option value="0">Asymptomatic</option>
+				</select><br><br>
+		
+		
+				<label class="lb" for="fasting_blood_sugar">Fasting Blood Sugar > 120 mg/dL:</label>
+				<select id="fasting_blood_sugar" name="fasting_blood_sugar" class="inpt required >
+					<option value="">--Select Option--</option>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</select><br><br>
+		
+				<label class="lb" for="resting_ecg">Resting ECG Results:</label>
+				<select id="resting_ecg" name="resting_ecg" class="inpt required >
+					<option value="">--Select Result--</option>
+					<option value="1">Normal</option>
+					<option value="2">ST-T Wave Abnormality</option>
+					<option value="0">Left Ventricular Hypertrophy</option>
+				</select><br><br>
+			</div>
+			
+			<div class="child2">
+				<label class="lb" for="exercise_angina">Exercise-Induced Angina:</label>
+				<select id="exercise_angina" name="exercise_angina" class="inpt required >
+					<option value="">--Select Option--</option>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</select><br><br>	
+		
+		
+		
+				<label class="lb" for="st-slope">ST Slope:</label>
+				<select id="st-slope" name="st-slope" class="inpt required >
+				  <option value="">Select one</option>
+				  <option value="2">Upsloping</option>
+				  <option value="1">Flat</option>
+				  <option value="0">Downsloping</option>
+				</select><br><br>
+		
+				<label class="lb" for="num-vessels-fluro">Number of Vessels Fluro:</label>
+				<select id="num-vessels-fluro" name="num-vessels-fluro" class="inpt required>
+				  <option value="">Select one</option>
+				  <option value="0">0</option>
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				</select> <br><br>	
+				
+				<label class="lb" for="thallium">Thallium:</label>
+				<select id="thallium" name="thallium" class="inpt required" >
+				  <option value="">Select one</option>
+				  <option value="2">Normal</option>
+				  <option value="1">Fixed Defect</option>
+				  <option value="3">Reversible Defect</option>
+				  <option value="0">Null</option>
+				  </select><br><br>				
+			</div>
+
+		</div>
+		
+		<div class="submit">
+			<button onclick="goToPage2()" class="submit-button">Submit</button>
+
+			<script>
+				function goToPage2() {
+				  window.location.href = "results.html";
+				}
+			  </script>
+
+			<input type="reset" id="reset"></input>
+		</div>
+
+
+
+	</div>
+
+</body>
+
+</html>

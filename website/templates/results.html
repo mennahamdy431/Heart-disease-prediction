@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<style>
+		html {  
+      		scroll-behavior: smooth;
+		}
+		*{
+			text-decoration: none;
+			list-style: none;
+			
+		}
+
+
+		.ques{
+			margin-left: 10%;
+			background-color: rgb(102, 173, 190);
+			width: 900px;
+			height: 400px;
+			border-radius: 15px;
+			position: absolute;
+			margin-top: 2%;
+		}
+		
+		.title{
+			position: relative;
+			margin-left: 5%;
+			color: #ffffff;
+			position: absolute;
+			top: 50px;
+			font-size: 55px;
+			
+		}
+		.predict{
+			background-color: #333;
+			height: 700px;
+			position: relative;
+			
+		}
+
+		.result {
+		color: white;
+		font-weight: bold;
+		font-size: 24px;
+		margin-top: 180px;
+		margin-left: 100px;
+		}
+
+		  .check{
+			margin-left: 45%;
+			margin-top: 20px;
+			position: absolute;
+			color: white !important;
+			border: 1px solid rgb(102, 173, 190);
+			background-color: #333;
+			padding: 18px 25px ;
+			font-size: 24px;
+			border-radius: 20px;
+		}
+		  
+
+
+	</style>
+	
+</head>
+<body>
+
+
+	<div  id="predict" class="predict">
+		<form class="ques" method="POST" action="/predict">
+			<h1 class="title">RESULT: </h1>
+		
+			<div class="result">
+				{% if prediction == 1 %}
+				  <p>There is a chance you may have a heart disease. We recommend consulting a healthcare professional for further evaluation and guidance.</p>
+				{% else %}
+				  <p>You are safe. There is no significant chance of having a heart disease. However, maintaining a healthy lifestyle is always beneficial.</p>
+				{% endif %}
+			</div>
+			  
+			<a class="check" href="predict">
+				Back
+			</a>
+		</div>
+		
+	</div>
+
+
+
+</body>
+
+</html>
